@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Project } from 'src/app/core/models/project.model';
+import { DataServiceService } from 'src/app/core/services/data-service.service';
 
 @Component({
   selector: 'app-project-details',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectDetailsComponent implements OnInit {
 
-  constructor() { }
+  @Input() projectId!: number;
+  project!: Project;
+  constructor(private dataSrv: DataServiceService,private route: ActivatedRoute) {}
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe(
+      (d) => {
+        this.projectId = d['id']
+      }
+    )
+    this.project = this.dataSrv.getProjectByID(this.projectId);
   }
 
 }

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Project } from 'src/app/core/models/project.model';
+import { DataServiceService } from 'src/app/core/services/data-service.service';
 
 @Component({
   selector: 'app-project',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor() { }
+  @Input() projectId!: number;
+  project!: Project;
+  constructor(private dataSrv: DataServiceService,private router: Router) {
+
+  }
 
   ngOnInit(): void {
+
+    this.project = this.dataSrv.getProjectByID(this.projectId);
+
+  }
+toProjectDetails(i_id: number) {
+  this.router.navigate(
+    ['/projectDetails'],
+    { queryParams: { id: i_id } }
+  );
   }
 
 }
