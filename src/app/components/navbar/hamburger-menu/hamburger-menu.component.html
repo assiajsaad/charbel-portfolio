@@ -1,1 +1,23 @@
-<p>hamburger-menu works!</p>
+<label>
+  <input id="check-burg" type="checkbox" (click)="clickHandler()" />
+  <span class="menu">
+    <span class="hamburger"></span>
+  </span>
+  <ul *ngIf="isChecked == true">
+    <li>
+      <a (click)="goToHome()" class="list-item">Home</a>
+    </li>
+    <li>
+      <a (click)="goToProjects()" class="list-item">Projects</a>
+    </li>
+    <li>
+      <a (click)="goToAboutUs()" class="list-item">About us</a>
+    </li>
+    <li>
+      <a (click)="goToNewsEvents()" class="list-item">News & Events</a>
+    </li>
+    <li>
+      <a (click)="goToContactUs()" class="list-item">Contact us</a>
+    </li>
+  </ul>
+</label>
