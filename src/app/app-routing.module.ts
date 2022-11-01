@@ -4,6 +4,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { NewsEventsComponent } from './components/news-events/news-events.component';
+import { ProjectDetailsComponent } from './components/projects/project-details/project-details.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 
 const routes: Routes = [
@@ -13,7 +14,7 @@ const routes: Routes = [
   {path:"contactUs" , component: ContactComponent},
   {path:"projects" , component: ProjectsComponent},
   {path:"newsEvents" , component: NewsEventsComponent},
-  {path:"projectDetails" , component: ProjectsComponent},
+  {path:"projectDetails" , component: ProjectDetailsComponent},
   {path:"**" , component: JumbotronComponent},
 ];
 
