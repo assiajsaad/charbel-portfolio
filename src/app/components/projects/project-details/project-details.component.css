@@ -1,4 +1,57 @@
 div {
-  border:1px solid black;
+  border: 1px solid black;
+}
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: max-content;
+  justify-content: center;
+  grid-template-areas:
+    "i i i i i i"
+    "t t t t s s"
+    "d d d d c c";
+}
+
+.title {
+  grid-area: t;
+  padding: 15px;
+}
+
+.image {
+  display: flex;
+  height: auto;
+  max-width: 100%;
+  grid-area: i;
+}
+
+.description {
+  grid-area: d;
+  padding: 15px;
+
+}
+
+.share {
+  display: flex;
+  grid-area: s;
+  padding: 15px;
+
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.share > ul > li {
+  display: inline;
+  font-size: 28px;
+  padding: 10px;
+}
+
+.client {
+  grid-area: c;
+  padding: 15px;
+}
+
+i {
+  cursor: pointer;
 }

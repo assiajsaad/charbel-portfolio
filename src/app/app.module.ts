@@ -14,6 +14,8 @@ import { LogoComponent } from './components/navbar/logo/logo.component';
 import { SearchBarComponent } from './components/navbar/search-bar/search-bar.component';
 import { ProjectComponent } from './components/projects/project/project.component';
 import { ProjectDetailsComponent } from './components/projects/project-details/project-details.component';
+import { HamburgerMenuTwoComponent } from './components/navbar/hamburger-menu-two/hamburger-menu-two.component';
+import { HamburgerMenuThreeComponent } from './components/navbar/hamburger-menu-three/hamburger-menu-three.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ProjectDetailsComponent } from './components/projects/project-details/p
     LogoComponent,
     SearchBarComponent,
     ProjectComponent,
-    ProjectDetailsComponent
+    ProjectDetailsComponent,
+    HamburgerMenuTwoComponent,
+    HamburgerMenuThreeComponent
   ],
   imports: [
     BrowserModule,

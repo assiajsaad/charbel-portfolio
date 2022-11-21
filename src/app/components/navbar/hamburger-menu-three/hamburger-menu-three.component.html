@@ -1,0 +1,17 @@
+<div class="hamburger-icon" id="icon" (click)="setTrigger()">
+  <div [ngClass]="{ a: trigger === true }" class="icon-1" id="a"></div>
+  <div [ngClass]="{ c: trigger === true }" class="icon-2" id="c"></div>
+  <div [ngClass]="{ b: trigger === true }" class="icon-3" id="b"></div>
+  <div class="clear"></div>
+</div>
+
+<nav id="nav" [ngClass]="{ show: trigger === true }">
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Contact</li>
+    <li>Help</li>
+  </ul>
+</nav>
+
+<div [ngClass]="{ slide: trigger === true }" class="dark-blue" id="blue"></div>
